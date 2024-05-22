@@ -1,0 +1,103 @@
+Ejercio 1
+#Serie Taylor: Exponencial
+import math as mt
+import matplotlib.pyplot as plt
+acu=0
+x=int(input('Ingrese el número x:'))
+n=int(input('Ingrese el número n:'))
+for i in range(0,n):
+    a=1/(2*i+1)
+    b=((x-1)/(x+1))**(2*i+1)
+    acu=acu+a*b
+    plt.plot(i, acu,'ro')
+print(f'La exponencial por sumatoria es {2*acu}')
+logo=mt.log(x)
+print(f'La exponencial real es {logo}')
+plt.title('GRAFICA DE EXPONENCIAL')
+plt.xlabel('Eje X')
+plt.ylabel('Eje Y')
+plt.grid()
+plt.show()
+
+
+Ejercicio 2
+i=1
+while i<6:
+    print(f'{i}')
+    i=i+1
+
+Ejercicio 3
+n=int(input('Ingrese n:'))
+for i in range(1,n+1):
+    if i==n:
+        print(f'{i}', end="")
+    else:
+        print(f'{i}', end=",")
+
+
+Ejercicio 4
+n=int(input("Ingrese la cantidad de edades:"))
+sum=0
+i=0 
+while i<n:
+    age=int(input(f"Ingrese la edad {i+1}: "))
+    sum+=age
+    i+=1
+prom=sum/n
+print(f"La suma de las edades es {sum}")
+print(f"El promedio es {prom}")
+
+Ejercicio 5
+n=int(input('Ingrese n:'))
+acu=0
+cont=0
+for i in range(1,n+1):
+  edad=int(input('Ingrese la edad:'))
+  if edad>=18:
+    cont=cont+1
+    acu=acu+edad
+
+print(f'Mayores de edad son: {cont}')
+print(f'El promedio es:{acu/cont}')
+
+
+Ejercicio 6
+#Ingresar "N" edades por teclado
+age = int(input("Ingrese las edades a calcular: "))
+age0 = 0
+while age > 0 :
+  age0  = age0 + age
+  age = int(input("Ingrese las edades a calcular: "))
+
+print(f"{age0}")
+
+Ejercicio 7
+n=int(input('Ingrese n:'))
+acu=0
+cont=0
+mayor=0
+menor=0
+for i in range(1,n+1):
+  edad=int(input('Ingrese la edad:'))
+  if edad>=18:
+    cont=cont+1
+    acu=acu+edad
+  if edad>mayor:
+    mayor=edad
+  if edad<menor:
+     menor=edad
+   
+print(f'La edad mayor es:{mayor}')
+print(f'La edad menor es:{menor}')
+print(f'Mayores de edad son: {cont}')
+if cont!=0:
+    print(f'El promedio es:{acu/cont}')
+
+
+Ejercicio 8
+import random
+n=int(input('Ingrese n:'))
+for i in range(1,n+1):
+    num=random.randint(0,10)
+    print(f'{num}')
+
