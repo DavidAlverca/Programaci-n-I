@@ -1,0 +1,145 @@
+Ejercicio 1
+import random as rd
+m=int(input('Ingrese las filas:'))            
+n=int(input('Ingrese las columnas:'))        
+A=[] #INICIALIZANDO MATRIZ
+
+#INSERTAR DATOS EN MATRIZ
+for i in range(m):
+    filas=[]
+    for j in range(n):
+        num=rd.randint(0, 10)
+        filas.append(num)
+    A.append(filas)
+
+#IMPRIMIR MATRIZ
+for i in range(m):
+    print('[',end='')
+    for j in range(n):
+        if j==n-1:
+            print(f'{A[i][j]}', end='')
+        else:
+            print(f'{A[i][j]}', end=',')
+    print(']')
+#filas
+sum_fila=[]
+for k in range(m):
+    contador_sum=0
+    for l in range(n):
+        contador_sum+=A[k][l]
+    sum_fila.append(contador_sum)
+print("Suma filas")
+print(sum_fila)
+#columnas
+sum_column=[]
+for t in range(m):
+    contador_colum=0
+    for y in range(n):
+        contador_colum+=A[y][t]
+    sum_column.append(contador_colum)
+print("Suma columnas")
+print(sum_column)
+
+#Mayor e índice
+mayor_fila=[]
+for k in range(m):
+    bigger=A[k][0]
+    largo=0
+    for l in range(n):
+        if A[k][l]>bigger:
+            bigger=A[k][l]
+            largo=[bigger,l]
+    mayor_fila.append(largo)
+print("Mayor elemento fila y su índice")
+print(mayor_fila)
+
+#Menor e índice
+menor_column=[]
+for k in range(m):
+    shorter=A[m-1][k]
+    corto=0
+    for l in range(n):
+        if A[l][k]<=shorter:
+            shorter=A[l][k]
+            corto=[shorter,l]
+    menor_column.append(corto)
+print("Columnas menores e índices")
+print(menor_column)
+
+
+Ejercicio 2
+Vector=[]
+numero=int(input("ingrese cuantos vectores quieren: "))
+for i in range(numero):
+  num=rd.randint(1,10)
+  Vector.append(num)
+print(Vector)
+
+eliminar = int(input("ingrese el numero que desea eliminar:"))
+for i in Vector:
+  if i ==eliminar:
+    Vector.remove(eliminar)
+    print(Vector)
+
+
+Ejercicio 3
+import random as rd
+Vector = []
+numero = int(input("Ingrese cuántos vectores quiere: "))
+
+for i in range(numero):
+    num = rd.randint(1, 10)
+    Vector.append(num)
+
+print("Vector original:", Vector)
+
+eliminar = int(input("Ingrese el número que desea eliminar: "))
+nuevo_vector = []
+for i in Vector:
+    if i != eliminar:
+        nuevo_vector.append(i)
+
+Vector = nuevo_vector
+
+print("Vector después de eliminar:", Vector)
+
+Ejercicio 4
+import random as rd
+m=int(input('Ingrese el tamaño del vector:'))            
+A=[] #INICIALIZANDO lista
+for i in range(m):
+   A.append(rd.randint(1,10))#Asignamos vectores random 
+print(A)
+
+eliminar = int(input("ingrese el numero que desea eliminar:"))
+for i in A:
+  if i == eliminar: 
+   A.remove(eliminar)
+print(A)
+
+Ejercicio 5
+import random
+vec=[]
+n=int(input("Ingrese el tamaño del vector:"))
+
+for i in range(n):
+    num=random.randint(1,10)
+    vec.append(num)
+
+print(vec)
+elim=int(input("Que elemento quieres eliminar:"))
+while True:
+    for i in vec:
+        if elim in vec:
+            vec.remove(elim)
+    print(vec)
+    opc=str(input("Quieres eliminar más elementos(si/no):"))
+    if opc=="si":
+        elim=int(input("Que elemento quieres eliminar:"))
+        for i in vec:
+            if elim in vec:
+                vec.remove(elim)
+        print(vec)
+    else: 
+        break
+
