@@ -1,0 +1,85 @@
+Ejercicio 1
+import random as rd
+m=int(input('Ingrese las filas:'))            
+n=int(input('Ingrese las columnas:'))        
+A=[] #INICIALIZANDO MATRIZ
+
+#INSERTAR DATOS EN MATRIZ
+for i in range(m):
+    filas=[]
+    for j in range(n):
+        num=rd.randint(0, 10)
+        filas.append(num)
+    A.append(filas)
+
+#IMPRIMIR MATRIZ
+for i in range(m):
+    print('[',end='')
+    for j in range(n):
+        if j==n-1:
+            print(f'{A[i][j]}', end='')
+        else:
+            print(f'{A[i][j]}', end=',')
+    print(']')
+
+#SUMAR FILA ALEATORIA
+alea1=rd.randint(0, m-1)
+suma1=0
+for j in range(n):
+    suma1=suma1+A[alea1][j]
+print(f'La suma de la fila {alea1} es {suma1}')
+
+#SUMAR COLUMNA ALEATORIO
+alea2=rd.randint(0, n-1)
+suma2=0
+for i in range(m):
+    suma2=suma2+A[i][alea2]
+print(f'La suma de la columna {alea2} es {suma2}')
+
+Ejercicio 2
+import random as rd
+m=int(input('Ingrese las filas:'))            
+n=int(input('Ingrese las columnas:'))        
+A=[] #INICIALIZANDO MATRIZ
+
+#INSERTAR DATOS EN MATRIZ
+for i in range(m):
+    filas=[]
+    for j in range(n):
+        num=rd.randint(0, 10)
+        filas.append(num)
+    A.append(filas)
+
+#IMPRIMIR MATRIZ
+for i in range(m):
+    print('[',end='')
+    for j in range(n):
+        if j==n-1:
+            print(f'{A[i][j]}', end='')
+        else:
+            print(f'{A[i][j]}', end=',')
+    print(']')
+
+
+#SUMA DIAGONAL PRINCIPAL
+sumadiagp=0
+if m==n:
+    for i in range(m):
+        for j in range(n):
+            if i==j:
+               sumadiagp+=A[i][j]
+print(f'La suma de la diagonal principal es {sumadiagp}')
+
+#SUMA DIAGONAL SECUNDARIA
+sumadiags=0
+if m==n:
+    for i in range(m):
+        for j in range(n):
+            if i+j==n-1:
+               sumadiags+=A[i][j]
+print(f'La suma de la diagonal secundaria es {sumadiags}'
+
+
+
+
+
