@@ -1,0 +1,40 @@
+Ejercicio 1
+fosforos=int(input('Ingrese la cantidad de fósforos:'))
+cajas=fosforos//40
+sobra_fos=fosforos%40
+paquetes=cajas//30
+sobra_paquetes=cajas%30
+cartones=paquetes//50
+sobra_cartones=paquetes%50
+furgonetas=cartones//30
+sobra_furgon=cartones%30
+
+
+print(f'Cajas={cajas}')
+print(f'Paquetes={paquetes}')
+print(f'Cartones={cartones}')
+print(f'Furgones={furgonetas}')
+print(f'Sobran Fosforos={sobra_fos}')
+
+Ejercicio 2 
+#Solicitud de datos
+sec = int(input("Ingrese la cantidad de segundos: "))
+
+#Procesos
+Hora = sec//3600
+Sob_hora= sec%3600
+
+Min = Sob_hora//60
+Sob_min = Sob_hora%60
+
+Sec_sob = Sob_min%60
+
+#Resultados
+print(f"{Hora}:{Min}:{Sec_sob}")
+
+Ejercicio 3
+n= int(input("Ingrese la calificación: "))
+if n>50 or n<0:
+    print("NO ES VALIDA")
+else:
+    print("ES VALIDA")
