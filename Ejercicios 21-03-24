@@ -1,0 +1,129 @@
+Ejercico 1
+condicion=int(input('Ingrese un valor:'))
+
+if condicion == 1:
+    print("Haz a")
+elif condicion == 2:
+    print("Haz b")
+elif condicion == 3:
+    print("Haz c")
+else:
+    print("Haz d")
+
+Ejercicio 2
+print('1.- SUMA DE NUMEROS')
+print('2.- MULTIPLICACION DE NUMEROS')
+print('3.- DIVISION DE NUMEROS')
+condicion=int(input('Ingrese un valor:'))
+
+if condicion == 1:
+    print("Suma de números")
+    num1=int(input('Ingrese primer número:'))
+    num2=int(input('Ingrese segundo número:'))
+    suma=num1+num2
+    print(f'La suma es {suma}')
+elif condicion == 2:
+    print("Multiplicación de números")
+    num1=int(input('Ingrese primer número:'))
+    num2=int(input('Ingrese segundo número:'))
+    multi=num1*num2
+    print(f'La suma es {multi}')
+elif condicion == 3:
+    print("División de Números")
+    num1=int(input('Ingrese primer número:'))
+    num2=int(input('Ingrese segundo número:'))
+    division=num1/num2
+    print(f'La suma es {division}')
+    
+    
+else:
+    print("Ingrese la opción correcta")
+
+Ejercicio 3
+Algoritmo sin_titulo
+	Escribir "1.- SUMA"
+	Escribir "2.- MULTI"
+	Escribir "3.- DIVI"
+	Leer op
+	Segun op Hacer
+		1:
+			Escribir "Sumar dos números"
+			Leer num1
+			Leer num2
+			suma=num1+num2
+			Escribir "La suma es:",suma
+		2:
+			Escribir "Multiplicación dos números"
+		3:
+			Escribir "División dos números"
+		De Otro Modo:
+			Escribir "Escoja la opción correcta"
+	Fin Segun
+FinAlgoritmo
+
+Ejercicio 4
+num=int(input('Ingrese el número:'))
+if (num%2)==0:
+    print('El número es par')
+else:
+    print('El número es impar')
+
+Ejercicio 5
+cal=int(input('Ingrese la calificación:'))
+if cal>=0 and cal<=50:
+    print('La calificación es válida')
+else:
+    print('La calificación no es válida')
+
+Ejercicio 6
+cal=int(input('Ingrese la calificación:'))
+if cal<0 or cal>50:
+    print('La calificación no es válida')
+else:
+    print('La calificación es válida')
+Ejercicio 7
+#Resolver ecuacion de primer grado
+a= float(input("Ingrese el valor de a: "))
+b= float(input("Ingrese el valor de b: "))
+if a!=0:
+    x= -b/a
+    print(x)
+else:
+    if b!=0:
+        print("Solucion imposible")
+    else:
+        print ("Solucion indeterminada")
+
+Ejercicio 8
+#Resolver ecuacion de primer grado
+a= float(input("Ingrese el valor de a: "))
+b= float(input("Ingrese el valor de b: "))
+if a!=0:
+    x= -b/a
+    print(x)
+elif b!=0:
+        print("Solucion imposible")
+else:
+        print ("Solucion indeterminada")
+
+Ejercicio 9
+nombre=input('Ingrese el nombre:')
+horas=int(input('Ingrese las horas:'))
+tarifa=int(input('Ingrese la tarifa:'))
+impuestos=0
+if horas<=35:
+    sueldo_bruto=horas*tarifa
+else: 
+    sueldo_bruto=35*tarifa+(horas-35)*1.5*tarifa
+
+if sueldo_bruto<=2000:
+    impuestos=0
+else:
+    if sueldo_bruto>2000 and sueldo_bruto<=2220:
+        impuestos=(sueldo_bruto-2000)*0.20
+    else:
+        impuestos=(220*0.20)+(sueldo_bruto-2220)
+        
+sneto=sueldo_bruto-impuestos
+
+print(f"Su nombre es:{nombre}, su sueldo es:{sueldo_bruto}, los impuestos son:{impuestos}, su sueldo neto es: {sneto}")
