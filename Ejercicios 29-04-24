@@ -1,0 +1,174 @@
+Ejercicio 1
+import random as rd
+import  matplotlib.pyplot as plt
+#Definición de entradas
+n=int(input('Ingrese el tamaño del Vector:'))
+vec1=[]
+vec2=[]
+
+#Ingreso de datos en el vector
+for i in range(n):
+    num1=rd.randint(0, 10)
+    vec1.append(num1)
+    num2=rd.randint(0, 10)
+    vec2.append(num2)
+print(vec1)
+print(vec2)
+plt.plot(vec1,vec2, 'ro')
+plt.show()
+
+Ejercicio 2
+import random as rd
+
+#Definición de entradas
+n=int(input('Ingrese el tamaño del Vector:'))
+vec=[]
+
+#Ingreso de datos en el vector
+for i in range(n):
+    num=rd.randint(0, 10)
+    vec.append(num)
+
+#IMPRESION de vector de manera iterativa
+print("IMPRESION NORMAL")
+print('[',end="")
+for i in range(n):
+    if i==n-1:
+        print(vec[i], end="")
+    else:
+        print(vec[i], end=" ")
+print(']')
+
+print("IMPRESION ALREVEZ")
+print('[',end="")
+n = len(vec)
+for i in range(n-1,-1,-1):
+    if i==0:
+        print(vec[i], end="")
+    else:
+        print(vec[i], end=" ")
+print(']')
+
+print("OTRA FORMA IMPRESION ALREVEZ - FORMA ITERATIVA")
+print('[',end="")
+for i in range(len(vec)):
+    if i==n-1:
+        print(vec[-i-1], end="")
+    else:
+        print(vec[-i-1], end=" ")
+print(']')
+
+
+Ejercicio 3
+
+import random as rd
+
+#Definición de entradas
+n=int(input('Ingrese el tamaño del Vector:'))
+vec=[]
+
+#Ingreso de datos en el vector
+for i in range(n):
+    num=input(f'Ingrese el nombre_{i+1}:')
+    vec.append(num)
+
+#IMPRESION de vector de manera iterativa
+print("IMPRESION NORMAL")
+print('[',end="")
+for i in range(n):
+    if i==n-1:
+        print(vec[i], end="")
+    else:
+        print(vec[i], end=" ")
+print(']')
+
+
+#ORDENAMIENTO de vector - Método Burbuja
+for i in range(n):
+    for j in range(n-1):
+        if vec[j]>vec[j+1]:
+            vec[j],vec[j+1]=vec[j+1],vec[j]
+            
+print("IMPRESION ORDENADA")
+print('[',end="")
+for i in range(n):
+    if i==n-1:
+        print(vec[i], end="")
+    else:
+        print(vec[i], end=" ")
+print(']')
+
+Ejercicio 4
+m=int(input('Ingrese las filas:'))            
+n=int(input('Ingrese las columnas:'))        
+A=[]
+for i in range(m):
+    filas=[]
+    for j in range(n):
+        num=int(input(f'Ingrese el elemnto[{i}][{j}]:'))
+        filas.append(num)
+    A.append(filas)
+
+print('IMPRIMIR MATRIZ')
+for i in range(m):
+    print('[',end='')
+    for j in range(n):
+        print(f'{A[i][j]}', end=' ')
+    print(']')
+
+Ejercicio 5
+import random as rd
+m=int(input('Ingrese las filas:'))            
+n=int(input('Ingrese las columnas:'))        
+A=[]
+for i in range(m):
+    filas=[]
+    for j in range(n):
+        num=rd.randint(0, 10)
+        filas.append(num)
+    A.append(filas)
+
+print('IMPRIMIR MATRIZ')
+for i in range(m):
+    print('[',end='')
+    for j in range(n):
+        if j==n-1:
+            print(f'{A[i][j]}', end='')
+        else:
+            print(f'{A[i][j]}', end=',')
+    print(']')
+
+
+Ejercicio 6
+#Sumar la primera fila
+suma=0
+for i in range(n):
+   suma=suma+A[0][i]
+print(f'La suma es {suma}')
+
+Ejercicio 7
+#Sumar la primera fila
+suma=0
+for i in range(m):
+    for j in range(n):
+        if i==0:
+            suma=suma+A[i][j]
+print(f'La suma es {suma}')
+
+
+Ejercicio 8
+acum=0
+for h in A[0]:  
+  acum+=h
+print(f"La suma de los elementos de la primera fila es {acum}")
+
+Ejercicio 9
+#Sumatoria de la columna n, considerar las variables
+col = random.randint(0,4)
+
+sum = 0
+for fila in range (f):
+    for columna in range (c):
+        if columna == col:
+            sum += Mat[fila][columna]        
+print(f"\nLa sumatoria de la columna {col} es: {sum}")
